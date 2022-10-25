@@ -7,6 +7,31 @@
     <title>Hong Kong Economic History Web</title>
     <link rel="stylesheet" href="link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
     <!-- google font  -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
@@ -37,7 +62,6 @@
             <div class="night">
                 <p>Hong Kong is a city and special administrative region of China on the eastern Pearl River Delta in South China. With 7.5 million residents of various nationalities in a 1,104-sqaure-kilometer territory, Hong Kong is one of the most densely populated places in the world. Hong Kong is also a major global financial center and one of the most developed cities in the world.</p>
             </div>
-            
         </section>
         <section class="right">
             <h2>small tips:</h2>
