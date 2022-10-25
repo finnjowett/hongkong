@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+1. nested CSS
+2. variables
+3. self &
+4. import
+5. mixin
+*/
+footer {
+  background-color: aquamarine;
+}
+footer h1 {
+  color: aqua;
+}
+footer:hover {
+  background-color: green;
+}
+
+div.link {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

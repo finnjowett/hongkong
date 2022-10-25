@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+1. nested CSS
+2. variables
+3. self &
+4. import
+5. mixin
+*/ 
+@import "./footer";
+
+@mixin flexbox($a){
+    display: flex;
+    flex-direction:$a
+}
+
+div.link{
+    @include flexbox(column);
+}
